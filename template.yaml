@@ -200,11 +200,11 @@ body:
       -->
 
       We construct Phys-AD dataset with 22 classes of objects, 6,359 videos and 796,320 frames in total. Compared with other video datasets, this is a large-scale industry-related real-world video dataset.\
-      Our dataset keeps the video resolution as high as 1920*1080 to meet the demand of detailed appearence. We also adopt an FPS of 60 to better catch the fast motion of the object.\
+      Our dataset keeps the video resolution as high as 1920*1080 to meet the demand of detailed appearance. We also adopt an FPS of 60 to better catch the fast motion of the object.\
       We design the videos to be short, ranging from 1s to 4s, depending on the class. On the one hand most interactions can be accomplished in such time. On the other hand we expect the detection process to be quick under the scene of industry.
       <img src="category2.png" alt="Description" uk-img>
       <div></div>
-      We apply multiple interactions accroding to the functions of the objects with UR5 robot and motor/servo, such as slide, move, squeeze, stretch, rotate, etc.
+      We apply multiple interactions according to the functions of the objects with UR5 robot and motor/servo, such as slide, move, squeeze, stretch, rotate, etc.
       <img src="data collection.png" alt="Description" uk-img>
       <!--/* Refer to [UIKit Video Components Documentation](https://getuikit.com/docs/video) and [Grid system](https://getuikit.com/docs/grid)-->
 
