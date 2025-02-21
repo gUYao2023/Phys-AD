@@ -180,24 +180,6 @@ body:
         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
       </div>
-      <!--
-      <div class="uk-position-relative" uk-slideshow="animation: slide">
-        <div class="uk-slideshow-items">
-          <div>
-            <img src="overview1.jpg" alt="" uk-cover>
-          </div>
-          <div>
-            <img src="overview2.jpg" alt="" uk-cover>
-          </div>
-        </div>
-        <div class="uk-position-bottom-center uk-position-small">
-          <ul class="uk-thumbnav">
-            <li uk-slideshow-item="0"><a href="#"><img src="overview1.jpg" width="100" height="67" alt=""></a></li>
-            <li uk-slideshow-item="1"><a href="#"><img src="overview2.jpg" width="100" height="67" alt=""></a></li>
-          </ul>
-        </div>
-      </div>
-      -->
 
       We construct Phys-AD dataset with 22 classes of objects, 6,359 videos and 796,320 frames in total. Compared with other video datasets, this is a large-scale industry-related real-world video dataset.\
       Our dataset keeps the video resolution as high as 1920*1080 to meet the demand of detailed appearance. We also adopt an FPS of 60 to better catch the fast motion of the object.\
