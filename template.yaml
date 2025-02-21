@@ -1,0 +1,250 @@
+theme: default # default || classic || dark
+organization: Pixel Genius Labs
+# twitter: '@denkivvakame'
+title: Phys-AD
+article: "Towards Visual Discrimination and Reasoning of Real-World Physical Dynamics: Physics-Grounded Anomaly Detection"
+journal: "CVPR'25"
+resources:
+  paper: # https://openreview.net/
+  arxiv: https://arxiv.org
+  code: https://github.com/Chopper-233/Physics-AD
+  # video: https://www.youtube.com/embed/onbnb_D1wC8?si=xJczUv716Lt5aO4l&amp;start=1150
+  # demo: https://colab.research.google.com/
+  huggingface: https://huggingface.co/
+description: 
+
+image: https://denkiwakame.github.io/academic-project-template/teaser.jpg
+url: https://denkiwakame.github.io/academic-project-template
+speakerdeck: # speakerdeck slide ID
+authors:
+  - name: Wenqiao Li*
+    affiliation: [1]
+    # url: http://denkiwakame.github.io/
+    position: intern
+  - name: Yao Gu*
+    affiliation: [1]
+    position: Researcher
+    # url: https://thispersondoesnotexist.com/
+  - name: Xintao Chen*
+    affiliation: [1]
+    position: Researcher
+    # url: https://thispersondoesnotexist.com/
+  - name: Xiaohao Xu
+    affiliation: [2]
+    position: Researcher
+    # url: https://thispersondoesnotexist.com/
+  - name: Yingna Wu
+    affiliation: [1]
+    position: Researcher
+    # url: https://thispersondoesnotexist.com/
+affiliations:
+  - Shanghaitech University
+  - University of Michigan
+# meta:
+#   - '*work done while she was interning at Pixel Genius Lab.'
+bibtex: >
+  @article{***,
+    author    = {Wenqiao Li, Yao Gu, Xintao Chen, Xiaohao Xu, Yingna Wu},
+    title     = {Towards Visual Discrimination and Reasoning of Real-World Physical Dynamics: Physics-Grounded Anomaly Detection},
+    conference   = {CVPR},
+    year      = {2025},
+    volume    = {99},
+    number    = {1},
+    pages     = {1-42},
+    month     = {January},
+    keywords  = {Super AI, Machine Learning, Artificial Intelligence, Technological Innovation},
+    doi       = {10.9999/jsis.2024.001},
+    url       = {https://www.example.com/superai-article},
+    note      = {This paper sets the benchmark for future AI research and applications.}
+  }
+
+body:
+  - title: 
+    text: |
+      <style>
+        .custom-video {
+          border: 3px solid #333;
+          border-radius: 10px;
+          padding: 5px;
+        }
+      </style>
+
+      <video
+        class="custom-video" 
+        src="demo1.mp4"
+        loop
+        muted
+        uk-video="autoplay:inview"
+        />
+
+      
+
+
+  - title: 
+    text: |
+      <style>
+        .custom-table {
+          border: 3px solid #333;
+          border-collapse: collapse;
+          border-radius: 10px;
+          border-collapse: separate;
+          background-color: #f4f4f4;
+        }
+        .custom-table td, .custom-table th {
+          padding: 5px;
+        }
+        .custom-table video {
+          width: 100%;
+          height: 100px;
+          object-fit: contain;
+        }
+
+      </style>
+
+
+
+  - title: Abstract
+    text: |
+      Humans detect real-world object anomalies by perceiving, interacting, and reasoning based on object-conditioned physical knowledge. The long-term goal of Industrial Anomaly Detection (IAD) is to enable machines to autonomously replicate this skill. However, current IAD algorithms are largely developed and tested on static, semantically simple datasets, which diverge from real-world scenarios where physical understanding and reasoning are essential. 
+      To bridge this gap, we introduce the Physics Anomaly Detection (Phys-AD) dataset, the first large-scale, real-world, physics-grounded video dataset for industrial anomaly detection. Collected using a real robot arm and motor, Phys-AD provides a diverse set of dynamic, semantically rich scenarios. The dataset includes about 6400 videos across 22 real-world object categories, interacting with robot arms and motors, and exhibits 47 types of anomalies. Anomaly detection in Phys-AD requires visual reasoning, combining both physical knowledge and video content to determine object abnormality. 
+      We benchmark state-of-the-art anomaly detection methods under three settings: unsupervised AD, weakly-supervised AD, and video-understanding AD, highlighting their limitations in handling physics-grounded anomalies. Additionally, we introduce the Physics Anomaly Explanation (PAEval) metric, designed to assess the ability of visual-language foundation models to not only detect anomalies but also provide accurate explanations for their underlying physical causes.
+
+
+  - title: Phys-AD Dataset
+    text: |
+      This is an overview of Phys-AD dataset. We select objects of different moving patterns and functions trying to cover possible scenes in industry anomaly detection. Phys-AD is not only based on industrial scene, which has distinguished gap with daily scene, but also has large amount of defects requires dynamic or physics information to judge. Therefore the dataset has raised a novel and challenging problem to solve.
+            <table class="uk-table custom-table">
+          <tbody>
+              <tr>
+                  <td><video src="ball.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="button.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="car.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="clip.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="hinge.mp4" loop muted uk-video="autoplay:inview"/></td>
+              </tr>
+              <tr>
+                  <td><video src="liquid.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="magnet.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="rolling_bear.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="rubber_band.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="screw.mp4" loop muted uk-video="autoplay:inview"/></td>
+              </tr>
+          </tbody>
+          <tfoot>
+              <tr>
+                  <td><video src="slide.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="sticky_roller.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="toothpaste.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="fan_n.mp4" loop muted uk-video="autoplay:inview"/></td>
+                  <td><video src="zipper.mp4" loop muted uk-video="autoplay:inview"/></td>
+              </tr>
+          </tfoot>
+      </table>
+  
+      <div class="uk-position-relative uk-visible-toggle uk-light " tabindex="-1" uk-slider>
+        <div class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+            <div>
+                <video src="ball_abn.mp4" loop muted uk-video="autoplay:inview"/>
+                <div class="uk-position-center uk-panel"><h1>1</h1></div>
+            </div>
+            <div>
+                <video src="button_abn.mp4" loop muted uk-video="autoplay:inview"/>
+                <div class="uk-position-center uk-panel"><h1>2</h1></div>
+            </div>
+            <div>
+                <video src="car_abn.mp4" loop muted uk-video="autoplay:inview"/>
+                <div class="uk-position-center uk-panel"><h1>3</h1></div>
+            </div>
+            <div>
+                <video src="clip_abn.mp4" loop muted uk-video="autoplay:inview"/>
+                <div class="uk-position-center uk-panel"><h1>4</h1></div>
+            </div>
+            <div>
+                <video src="magnet_abn.mp4" loop muted uk-video="autoplay:inview"/>
+                <div class="uk-position-center uk-panel"><h1>5</h1></div>
+            </div>
+            <div>
+                <video src="screw_abn.mp4" loop muted uk-video="autoplay:inview"/>
+                <div class="uk-position-center uk-panel"><h1>6</h1></div>
+            </div>
+            <div>
+                <video src="toothpaste_abn.mp4" loop muted uk-video="autoplay:inview"/>
+                <div class="uk-position-center uk-panel"><h1>8</h1></div>
+            </div>
+            <div>
+                <video src="fan_abn.mp4" loop muted uk-video="autoplay:inview"/>
+                <div class="uk-position-center uk-panel"><h1>9</h1></div>
+            </div>
+        </div>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+      </div>
+      <!--
+      <div class="uk-position-relative" uk-slideshow="animation: slide">
+        <div class="uk-slideshow-items">
+          <div>
+            <img src="overview1.jpg" alt="" uk-cover>
+          </div>
+          <div>
+            <img src="overview2.jpg" alt="" uk-cover>
+          </div>
+        </div>
+        <div class="uk-position-bottom-center uk-position-small">
+          <ul class="uk-thumbnav">
+            <li uk-slideshow-item="0"><a href="#"><img src="overview1.jpg" width="100" height="67" alt=""></a></li>
+            <li uk-slideshow-item="1"><a href="#"><img src="overview2.jpg" width="100" height="67" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+      -->
+
+      We construct Phys-AD dataset with 22 classes of objects, 6,359 videos and 796,320 frames in total. Compared with other video datasets, this is a large-scale industry-related real-world video dataset.\
+      Our dataset keeps the video resolution as high as 1920*1080 to meet the demand of detailed appearence. We also adopt an FPS of 60 to better catch the fast motion of the object.\
+      We design the videos to be short, ranging from 1s to 4s, depending on the class. On the one hand most interactions can be accomplished in such time. On the other hand we expect the detection process to be quick under the scene of industry.
+      <img src="category2.png" alt="Description" uk-img>
+      <div></div>
+      We apply multiple interactions accroding to the functions of the objects with UR5 robot and motor/servo, such as slide, move, squeeze, stretch, rotate, etc.
+      <img src="data collection.png" alt="Description" uk-img>
+      <!--/* Refer to [UIKit Video Components Documentation](https://getuikit.com/docs/video) and [Grid system](https://getuikit.com/docs/grid)-->
+
+  - title: PAEval
+    text: |
+      To assess the ability of VLMs to understand videos, we propose a novel evaluation matrix: PAEval. By compare the outputs of a VLM with the standard descriptions of a video and the explanations of the abnomalities separately, we can get the PAEval scores of the video.\
+      A label is designed by human and enhanced by GPT-4o. All of the enhanced labels are checked by human to ensure to be accurate. With this evaluation we expect the VLMs to focus on the esstial part and understand the video like experienced human. 
+      <video
+        class="custom-video" 
+        src="demo2.mp4"
+        loop
+        muted
+        uk-video="autoplay:inview"
+        />
+
+  - title: Benchmark
+    text: |
+      We test our dataset on the state-of-art methods and classic methods according to AUROC and PAEval, which can be basically divided into 'Unsupervised methods', 'Weakly supervised methods' and 'VLM based methods'. \
+      From the AUROCs we find the existing methods cannot perform well on our dataset, proving that the Phys-AD raise a novel field of IAD. From the PAEval we find that as the most potential methods, VLMs need more knowledge from the industrial scene, otherwise they would struggle to understand the videos properly.
+      <!--
+      <div class="uk-position-relative" uk-slideshow="animation: fade">
+        <div class="uk-slideshow-items">
+          <div>
+            <img src="benchmark.jpg" alt="" uk-cover>
+          </div>
+          <div>
+            <img src="PAEval.jpg" alt="" uk-cover>
+          </div>
+        </div>
+        <div class="uk-position-bottom-center uk-position-small">
+          <ul class="uk-thumbnav">
+            <li uk-slideshow-item="0"><a href="#"><img src="benchmark.jpg" width="100" height="67" alt=""></a></li>
+            <li uk-slideshow-item="1"><a href="#"><img src="PAEval.jpg" width="100" height="67" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+      -->
+      <img src="benchmark.png" alt="Description" uk-img>
+      <p class="uk-text-center">result of AUROCs</p>
+      
+      <img src="PAEval.png" alt="Description" uk-img>
+      <p class="uk-text-center">result of PAEval</p>
+      
