@@ -77,9 +77,6 @@ body:
         uk-video="autoplay:inview"
         />
 
-      
-
-
   - title: 
     text: |
       <style>
@@ -98,17 +95,13 @@ body:
           height: 100px;
           object-fit: contain;
         }
-
       </style>
-
-
 
   - title: Abstract
     text: |
       Humans detect real-world object anomalies by perceiving, interacting, and reasoning based on object-conditioned physical knowledge. The long-term goal of Industrial Anomaly Detection (IAD) is to enable machines to autonomously replicate this skill. However, current IAD algorithms are largely developed and tested on static, semantically simple datasets, which diverge from real-world scenarios where physical understanding and reasoning are essential. 
       To bridge this gap, we introduce the Physics Anomaly Detection (Phys-AD) dataset, the first large-scale, real-world, physics-grounded video dataset for industrial anomaly detection. Collected using a real robot arm and motor, Phys-AD provides a diverse set of dynamic, semantically rich scenarios. The dataset includes about 6400 videos across 22 real-world object categories, interacting with robot arms and motors, and exhibits 47 types of anomalies. Anomaly detection in Phys-AD requires visual reasoning, combining both physical knowledge and video content to determine object abnormality. 
       We benchmark state-of-the-art anomaly detection methods under three settings: unsupervised AD, weakly-supervised AD, and video-understanding AD, highlighting their limitations in handling physics-grounded anomalies. Additionally, we introduce the Physics Anomaly Explanation (PAEval) metric, designed to assess the ability of visual-language foundation models to not only detect anomalies but also provide accurate explanations for their underlying physical causes.
-
 
   - title: Phys-AD Dataset
     text: |
@@ -185,10 +178,10 @@ body:
       Our dataset keeps the video resolution as high as 1920*1080 to meet the demand of detailed appearance. We also adopt an FPS of 60 to better catch the fast motion of the object.\
       We design the videos to be short, ranging from 1s to 4s, depending on the class. On the one hand most interactions can be accomplished in such time. On the other hand we expect the detection process to be quick under the scene of industry.
       <img src="category2.png" alt="Description" uk-img>
+
       <div></div>
       We apply multiple interactions according to the functions of the objects with UR5 robot and motor/servo, such as slide, move, squeeze, stretch, rotate, etc.
       <img src="data collection.png" alt="Description" uk-img>
-      <!--/* Refer to [UIKit Video Components Documentation](https://getuikit.com/docs/video) and [Grid system](https://getuikit.com/docs/grid)-->
 
   - title: PAEval
     text: |
@@ -206,25 +199,9 @@ body:
     text: |
       We test our dataset on the state-of-art methods and classic methods according to AUROC and PAEval, which can be basically divided into 'Unsupervised methods', 'Weakly supervised methods' and 'VLM based methods'. \
       From the AUROCs we find the existing methods cannot perform well on our dataset, proving that the Phys-AD raise a novel field of IAD. From the PAEval we find that as the most potential methods, VLMs need more knowledge from the industrial scene, otherwise they would struggle to understand the videos properly.
-      <!--
-      <div class="uk-position-relative" uk-slideshow="animation: fade">
-        <div class="uk-slideshow-items">
-          <div>
-            <img src="benchmark.jpg" alt="" uk-cover>
-          </div>
-          <div>
-            <img src="PAEval.jpg" alt="" uk-cover>
-          </div>
-        </div>
-        <div class="uk-position-bottom-center uk-position-small">
-          <ul class="uk-thumbnav">
-            <li uk-slideshow-item="0"><a href="#"><img src="benchmark.jpg" width="100" height="67" alt=""></a></li>
-            <li uk-slideshow-item="1"><a href="#"><img src="PAEval.jpg" width="100" height="67" alt=""></a></li>
-          </ul>
-        </div>
-      </div>
-      -->
-      <img src="benchmark.png" alt="Description" uk-img>
+
+      <img src="benchmark1.png" alt="Description" uk-img>
+      <img src="benchmark2.png" alt="Description" uk-img>
       <p class="uk-text-center">result of AUROCs</p>
       
       <img src="PAEval.png" alt="Description" uk-img>
