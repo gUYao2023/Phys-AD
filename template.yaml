@@ -5,11 +5,11 @@ title: Phys-AD
 article: "Towards Visual Discrimination and Reasoning of Real-World Physical Dynamics: Physics-Grounded Anomaly Detection"
 journal: "CVPR'25"
 resources:
-  arxiv: https://arxiv.org
+  paper: https://arxiv.org/abs/2503.03562
   code: https://github.com/Chopper-233/Physics-AD
   # video: https://www.youtube.com/embed/onbnb_D1wC8?si=xJczUv716Lt5aO4l&amp;start=1150
   # demo: https://colab.research.google.com/
-  huggingface: https://huggingface.co/datasets/guoliz/Phys-AD
+  dataset: https://huggingface.co/datasets/guoliz/Phys-AD
 description: 
 
 image: https://denkiwakame.github.io/academic-project-template/teaser.jpg
@@ -32,29 +32,30 @@ authors:
     affiliation: [2]
     position: Researcher
     # url: https://thispersondoesnotexist.com/
+  - name: Ming Hu
+    affiliation: [3]
+    position: Researcher
+    # url: https://thispersondoesnotexist.com/
+  - name: Xiaonan Huang
+    affiliation: [2]
+    position: Researcher
+    # url: https://thispersondoesnotexist.com/
   - name: Yingna Wu
     affiliation: [1]
     position: Researcher
     # url: https://thispersondoesnotexist.com/
 affiliations:
   - Shanghaitech University
-  - University of Michigan
+  - University of Michigan, Ann Arbor
+  - Monash University
 # meta:
 #   - '*work done while she was interning at Pixel Genius Lab.'
 bibtex: >
-  @article{***,
-    author    = {Wenqiao Li, Yao Gu, Xintao Chen, Xiaohao Xu, Yingna Wu},
-    title     = {Towards Visual Discrimination and Reasoning of Real-World Physical Dynamics: Physics-Grounded Anomaly Detection},
-    conference   = {CVPR},
-    year      = {2025},
-    volume    = {1},
-    number    = {1},
-    pages     = {1},
-    month     = {January},
-    keywords  = {1},
-    doi       = {1},
-    url       = {1},
-    note      = {1}
+  @article{li2025towards,
+    title={Towards Visual Discrimination and Reasoning of Real-World Physical Dynamics: Physics-Grounded Anomaly Detection},
+    author={Li, Wenqiao and Gu, Yao and Chen, Xintao and Xu, Xiaohao and Hu, Ming and Huang, Xiaonan and Wu, Yingna},
+    journal={arXiv preprint arXiv:2503.03562},
+    year={2025}
   }
 
 body:
@@ -173,8 +174,8 @@ body:
       We construct Phys-AD dataset with 22 classes of objects, 6,359 videos and 796,320 frames in total. Compared with other video datasets, this is a large-scale industry-related real-world video dataset.\
       Our dataset keeps the video resolution as high as 1920*1080 to meet the demand of detailed appearance. We also adopt an FPS of 60 to better catch the fast motion of the object.\
       We design the videos to be short, ranging from 1s to 4s, depending on the class. On the one hand most interactions can be accomplished in such time. On the other hand we expect the detection process to be quick under the scene of industry.
-      <img src="category2.png" alt="Description" uk-img>
-
+      <div></div>
+      <img src="statistic.png" alt="Description" uk-img>
       <div></div>
       We apply multiple interactions according to the functions of the objects with UR5 robot and motor/servo, such as slide, move, squeeze, stretch, rotate, etc.
       <img src="data collection.png" alt="Description" uk-img>
@@ -200,6 +201,8 @@ body:
       <img src="benchmark2.png" alt="Description" uk-img>
       <p class="uk-text-center">result of AUROCs</p>
       
-      <img src="PAEval.png" alt="Description" uk-img>
+      <div class="uk-flex uk-flex-center">
+        <img src="PAEval.png" alt="Description" uk-img>
+      </div>
       <p class="uk-text-center">result of PAEval</p>
       

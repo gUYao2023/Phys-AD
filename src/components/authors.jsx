@@ -7,15 +7,18 @@ export default class Authors extends React.Component {
   }
 
   render() {
-    const columnMaxLen =
-      this.props.authors.length > 4 ? 3 : this.props.authors.length;
-    const authorClass = `uk-width-1-${columnMaxLen} uk-width-1-${this.props.authors.length}@m`;
+    const columnMaxLen = this.props.authors.length;
+      // this.props.authors.length > 4 ? 3 : this.props.authors.length;
+    // const authorClass = `uk-width-1-${columnMaxLen} uk-width-1-${this.props.authors.length}@m`;
+    
+    const authorClass = `uk-width-1-${columnMaxLen}`;
     const affiliationClass = `uk-width-1-${this.props.affiliations.length} uk-margin-small-top`;
     return (
       <div>
         <div
-          className="uk-text-primary uk-text-center uk-flex-center uk-grid-collapse"
+          className="uk-text-primary uk-text-center uk-grid-collapse"
           data-uk-grid
+          style={{ "--uk-grid-columns": columnMaxLen, flexWrap: "nowrap", width: "100%", fontSize: '0.9em'}}
         >
           {this.props.authors.map((author, idx) => {
             return (

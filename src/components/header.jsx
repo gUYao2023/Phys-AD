@@ -22,10 +22,10 @@ class ResourceBtn extends React.Component {
     };
     this.icons = {
       paper: FaFilePdf,
-      arxiv: SiArxiv,
+      paper: SiArxiv,
       code: FaGithub,
       video: FaYoutube,
-      huggingface: HuggingFace,
+      dataset: HuggingFace,
       demo: GoogleColab,
     };
     this.handleResize = this.handleResize.bind(this);
@@ -46,7 +46,7 @@ class ResourceBtn extends React.Component {
     const sClass = 'uk-margin-small-left uk-margin-small-right uk-text-bold';
     const FaIcon = this.icons[this.props.title];
     const iTitle =
-      this.props.title == 'huggingface' && this.state.isMobile
+      this.props.title == 'dataset' && this.state.isMobile
         ? ' hf '
         : this.props.title;
     return (
@@ -77,7 +77,7 @@ export default class Header extends React.Component {
               <p className={titleClass}>{this.props.title}</p>
             </div>
             <div className="uk-text-center uk-text-large">
-              <p>{this.props.article}</p>
+              <p style={{fontSize: '1.2em'}}>{this.props.article}</p>
               <span className="uk-label uk-label-primary uk-text-center uk-margin-small-bottom">
                 {this.props.journal}
               </span>
