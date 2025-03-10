@@ -223,7 +223,7 @@ body:
       </div>
       <div></div>
       <div class="uk-flex uk-flex-center">
-        <img src="benchmark2.png" alt="Description" uk-img>
+        <img src="benchmark2.png" alt="Description" uk-img style="width: 85%;"> 
       </div>
       <p class="uk-text-center">Video-level AUROC results of 22 categories on Phys-AD dataset</p>
       <div></div>
