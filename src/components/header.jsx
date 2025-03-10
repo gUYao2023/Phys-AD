@@ -77,7 +77,7 @@ export default class Header extends React.Component {
               <p className={titleClass}>{this.props.title}</p>
             </div>
             <div className="uk-text-center uk-text-large">
-              <p style={{fontSize: '1.2em'}}>{this.props.article}</p>
+              <p style={{ fontSize: '1.2em' }}>{this.props.article}</p>
               <span className="uk-label uk-label-primary uk-text-center uk-margin-small-bottom">
                 {this.props.journal}
               </span>
