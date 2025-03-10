@@ -78,11 +78,24 @@ body:
         />      
 
   - title: Abstract
+    
     text: |
+      <style>
+        .justified-text {
+          text-align: justify;
+          text-align-last: justify;
+          width: 100%;
+          margin: 20px auto;
+          text-justify: inter-word;
+          hyphens: auto;
+        }
+      </style>
+
+      <p class="justified-text" style="line-height: 1.8;">
       Humans detect real-world object anomalies by perceiving, interacting, and reasoning based on object-conditioned physical knowledge. The long-term goal of Industrial Anomaly Detection (IAD) is to enable machines to autonomously replicate this skill. However, current IAD algorithms are largely developed and tested on static, semantically simple datasets, which diverge from real-world scenarios where physical understanding and reasoning are essential. 
       To bridge this gap, we introduce the Physics Anomaly Detection (Phys-AD) dataset, the first large-scale, real-world, physics-grounded video dataset for industrial anomaly detection. Collected using a real robot arm and motor, Phys-AD provides a diverse set of dynamic, semantically rich scenarios. The dataset includes about 6400 videos across 22 real-world object categories, interacting with robot arms and motors, and exhibits 47 types of anomalies. Anomaly detection in Phys-AD requires visual reasoning, combining both physical knowledge and video content to determine object abnormality. 
       We benchmark state-of-the-art anomaly detection methods under three settings: unsupervised AD, weakly-supervised AD, and video-understanding AD, highlighting their limitations in handling physics-grounded anomalies. Additionally, we introduce the Physics Anomaly Explanation (PAEval) metric, designed to assess the ability of visual-language foundation models to not only detect anomalies but also provide accurate explanations for their underlying physical causes.
-
+      </p>
   - title: Phys-AD Dataset
     text: |
       <style>
@@ -102,8 +115,10 @@ body:
           object-fit: contain;
         }
       </style>
-      This is an overview of Phys-AD dataset. We select objects of different moving patterns and functions trying to cover possible scenes in industry anomaly detection. Phys-AD is not only based on industrial scene, which has distinguished gap with daily scene, but also has large amount of defects requires dynamic or physics information to judge. Therefore the dataset has raised a novel and challenging problem to solve.
-            <table class="uk-table custom-table">
+      <p style="line-height: 1.8;">
+        This is an overview of Phys-AD dataset. We select objects of different moving patterns and functions trying to cover possible scenes in industry anomaly detection. Phys-AD is not only based on industrial scene, which has distinguished gap with daily scene, but also has large amount of defects requires dynamic or physics information to judge. Therefore the dataset has raised a novel and challenging problem to solve.
+      </p>
+        <table class="uk-table custom-table">
           <tbody>
               <tr>
                   <td><video src="ball.mp4" loop muted uk-video="autoplay:inview"/></td>
@@ -170,39 +185,50 @@ body:
         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
       </div>
-
-      We construct Phys-AD dataset with 22 classes of objects, 6,359 videos and 796,320 frames in total. Compared with other video datasets, this is a large-scale industry-related real-world video dataset.\
-      Our dataset keeps the video resolution as high as 1920*1080 to meet the demand of detailed appearance. We also adopt an FPS of 60 to better catch the fast motion of the object.\
-      We design the videos to be short, ranging from 1s to 4s, depending on the class. On the one hand most interactions can be accomplished in such time. On the other hand we expect the detection process to be quick under the scene of industry.
+      <p style="line-height: 1.8;">
+        We construct Phys-AD dataset with 22 classes of objects, 6,359 videos and 796,320 frames in total. Compared with other video datasets, this is a large-scale industry-related real-world video dataset.\
+        Our dataset keeps the video resolution as high as 1920*1080 to meet the demand of detailed appearance. We also adopt an FPS of 60 to better catch the fast motion of the object.\
+        We design the videos to be short, ranging from 1s to 4s, depending on the class. On the one hand most interactions can be accomplished in such time. On the other hand we expect the detection process to be quick under the scene of industry.
+      </p>
       <div></div>
       <img src="statistic.png" alt="Description" uk-img>
       <div></div>
-      We apply multiple interactions according to the functions of the objects with UR5 robot and motor/servo, such as slide, move, squeeze, stretch, rotate, etc.
+      <p style="line-height: 1.8;">
+        We apply multiple interactions according to the functions of the objects with UR5 robot and motor/servo, such as slide, move, squeeze, stretch, rotate, etc.
+      </p>
       <img src="data collection.png" alt="Description" uk-img>
 
   - title: PAEval
     text: |
-      To assess the ability of VLMs to understand videos, we propose a novel evaluation matrix: PAEval. By compare the outputs of a VLM with the standard descriptions of a video and the explanations of the abnomalities separately, we can get the PAEval scores of the video.\
-      A label is designed by human and enhanced by GPT-4o. All of the enhanced labels are checked by human to ensure to be accurate. With this evaluation we expect the VLMs to focus on the esstial part and understand the video like experienced human. 
+      <p style="line-height: 1.8;">
+        To assess the ability of VLMs to understand videos, we propose a novel evaluation matrix: PAEval. By compare the outputs of a VLM with the standard descriptions of a video and the explanations of the abnomalities separately, we can get the PAEval scores of the video.\
+        A label is designed by human and enhanced by GPT-4o. All of the enhanced labels are checked by human to ensure to be accurate. With this evaluation we expect the VLMs to focus on the esstial part and understand the video like experienced human. 
+      </p>
       <video
         class="custom-video" 
         src="demo2.mp4"
         loop
         muted
-        uk-video="autoplay:inview"
-        />
+        uk-video="autoplay:inview">
+      </video>
 
   - title: Benchmark
     text: |
-      We test our dataset on the state-of-art methods and classic methods according to AUROC and PAEval, which can be basically divided into 'Unsupervised methods', 'Weakly supervised methods' and 'VLM based methods'. \
-      From the AUROCs we find the existing methods cannot perform well on our dataset, proving that the Phys-AD raise a novel field of IAD. From the PAEval we find that as the most potential methods, VLMs need more knowledge from the industrial scene, otherwise they would struggle to understand the videos properly.
-
-      <img src="benchmark1.png" alt="Description" uk-img>
-      <img src="benchmark2.png" alt="Description" uk-img>
-      <p class="uk-text-center">result of AUROCs</p>
-      
+      <p style="line-height: 1.8;">
+        We test our dataset on the state-of-art methods and classic methods according to AUROC and PAEval, which can be basically divided into 'Unsupervised methods', 'Weakly supervised methods' and 'VLM based methods'.
+        From the AUROCs we find the existing methods cannot perform well on our dataset, proving that the Phys-AD raise a novel field of IAD. From the PAEval we find that as the most potential methods, VLMs need more knowledge from the industrial scene, otherwise they would struggle to understand the videos properly.
+      </p>
       <div class="uk-flex uk-flex-center">
-        <img src="PAEval.png" alt="Description" uk-img>
+        <img src="benchmark1.png" alt="Description" class="uk-margin-bottom" class="uk-margin-large-top" uk-img >
       </div>
-      <p class="uk-text-center">result of PAEval</p>
+      <div></div>
+      <div class="uk-flex uk-flex-center">
+        <img src="benchmark2.png" alt="Description" uk-img>
+      </div>
+      <p class="uk-text-center">Video-level AUROC results of 22 categories on Phys-AD dataset</p>
+      <div></div>
+      <div class="uk-flex uk-flex-center">
+        <img src="PAEval.png" alt="Description" class="uk-margin-top" uk-img>
+      </div>
+      <p class="uk-text-center">Video-level PAEval results of 4 video-understanding methods</p>
       
