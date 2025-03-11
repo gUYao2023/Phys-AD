@@ -226,17 +226,16 @@ body:
       <div class="uk-slider-items uk-grid">
           <div class="uk-width-3-4">
               <div class="uk-panel">
-                  <img src="benchmark1.png" width="600" height="400" alt="">
+                  <img src="benchmark1.png" width=100% height="auto" alt="">
                   <div class="uk-position-center uk-panel"><h1>1</h1></div>
               </div>
           </div>
           <div class="uk-width-3-4">
               <div class="uk-panel">
-                  <img src="benchmark2.png" width="600" height="400" alt="">
+                  <img src="benchmark2.png" width=100% height="auto" alt="">
                   <div class="uk-position-center uk-panel"><h1>2</h1></div>
               </div>
           </div>
-          
       </div>
 
       <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
