@@ -218,12 +218,30 @@ body:
         We test our dataset on the state-of-art methods and classic methods according to AUROC and PAEval, which can be basically divided into 'Unsupervised methods', 'Weakly supervised methods' and 'VLM based methods'.<br>
         From the AUROCs we find the existing methods cannot perform well on our dataset, proving that the Phys-AD raise a novel field of IAD. From the PAEval we find that as the most potential methods, VLMs need more knowledge from the industrial scene, otherwise they would struggle to understand the videos properly.
       </p>
-      <div class="uk-flex uk-flex-center">
-        <img src="benchmark1.png" alt="Description" class="uk-margin-bottom" class="uk-margin-large-top" uk-img >
+
+
+
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+
+      <div class="uk-slider-items uk-grid">
+          <div class="uk-width-3-4">
+              <div class="uk-panel">
+                  <img src="benchmark1.png" width="600" height="400" alt="">
+                  <div class="uk-position-center uk-panel"><h1>1</h1></div>
+              </div>
+          </div>
+          <div class="uk-width-3-4">
+              <div class="uk-panel">
+                  <img src="benchmark2.png" width="600" height="400" alt="">
+                  <div class="uk-position-center uk-panel"><h1>2</h1></div>
+              </div>
+          </div>
+          
       </div>
-      <div></div>
-      <div class="uk-flex uk-flex-center">
-        <img src="benchmark2.png" alt="Description" uk-img style="width: 85%;"> 
+
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+      
       </div>
       <p class="uk-text-center">Video-level AUROC results of 22 categories on Phys-AD dataset</p>
       <div></div>
