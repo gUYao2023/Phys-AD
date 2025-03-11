@@ -243,7 +243,7 @@ body:
       <p class="uk-text-center">Video-level AUROC results of 22 categories on Phys-AD dataset</p>
       <div></div>
       <div class="uk-flex uk-flex-center">
-        <img src="PAEval.png" alt="Description" class="uk-margin-top" uk-img>
+        <img src="PAEval.png" alt="Description" class="uk-margin-top" uk-img  width=80% height="auto">
       </div>
       <p class="uk-text-center">Video-level PAEval results of 4 video-understanding methods</p>
       
