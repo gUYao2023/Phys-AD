@@ -251,4 +251,4 @@ body:
       <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
       </div>
 
-      <p class="uk-text-center">Video-level AUROC results(a, b) of 22 categories and PAEval results(c) of 4 video-understanding methods on Phys-AD dataset</p>
+      <p class="uk-text-center">(a)Benchmark results on Phys-AD dataset. (b)Video-level AUROC results on unsupervised methods, weakly supervised methods and video-understanding method. (c)PAEval results on video-understanding method.</p>
