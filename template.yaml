@@ -240,6 +240,9 @@ body:
           <div class="uk-cover-container" style="height: 100%;">
               <img src="benchmark2.png" alt="" uk-cover>
           </div>
+          <div class="uk-cover-container" style="height: 100%;">
+              <img src="PAEval.png" alt="" uk-cover width=60% height="auto">
+          </div>
       </div>
 
       <a class="uk-position-center-left uk-position-small " href uk-slidenav-previous uk-slideshow-item="previous"></a>
@@ -248,10 +251,4 @@ body:
       <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
       </div>
 
-      <p class="uk-text-center">Video-level AUROC results of 22 categories on Phys-AD dataset</p>
-      <div></div>
-      <div class="uk-flex uk-flex-center">
-        <img src="PAEval.png" alt="Description" class="uk-margin-top" uk-img  width=80% height="auto">
-      </div>
-      <p class="uk-text-center">Video-level PAEval results of 4 video-understanding methods</p>
-      
+      <p class="uk-text-center">Video-level AUROC results(a, b) of 22 categories and PAEval results(c) of 4 video-understanding methods on Phys-AD dataset</p>
