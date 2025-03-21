@@ -115,35 +115,36 @@ body:
         }
 
       </style>
-      <p class="justified-text" style="line-height: 1.8;">
-        This is an overview of Phys-AD dataset. We select objects of different moving patterns and functions trying to cover possible scenes in industry anomaly detection. Phys-AD is not only based on industrial scene, which has distinguished gap with daily scene, but also has large amount of defects requires dynamic or physics information to judge. Therefore the dataset has raised a novel and challenging problem to solve.
+      <p class="justified-text" style="line-height: 1.8; text-align: center;" >
+        Overview of Phys-AD dataset      
       </p>
-        <table class="uk-table custom-table">
-          <tbody>
-              <tr>
-                  <td><video src="ball.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="button.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="car.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="clip.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="hinge.mp4" loop muted uk-video="autoplay:inview"/></td>
-              </tr>
-              <tr>
-                  <td><video src="liquid.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="magnet.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="rolling_bear.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="rubber_band.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="screw.mp4" loop muted uk-video="autoplay:inview"/></td>
-              </tr>
-          </tbody>
-          <tfoot>
-              <tr>
-                  <td><video src="slide.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="sticky_roller.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="toothpaste.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="fan_n.mp4" loop muted uk-video="autoplay:inview"/></td>
-                  <td><video src="zipper.mp4" loop muted uk-video="autoplay:inview"/></td>
-              </tr>
-          </tfoot>
+
+      <table class="uk-table custom-table">
+        <tbody>
+            <tr>
+                <td><video src="ball.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="button.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="car.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="clip.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="hinge.mp4" loop muted uk-video="autoplay:inview"/></td>
+            </tr>
+            <tr>
+                <td><video src="liquid.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="magnet.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="rolling_bear.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="rubber_band.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="screw.mp4" loop muted uk-video="autoplay:inview"/></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><video src="slide.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="sticky_roller.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="toothpaste.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="fan_n.mp4" loop muted uk-video="autoplay:inview"/></td>
+                <td><video src="zipper.mp4" loop muted uk-video="autoplay:inview"/></td>
+            </tr>
+        </tfoot>
       </table>
   
       <div class="uk-position-relative uk-light " tabindex="-1" uk-slider>
@@ -185,23 +186,24 @@ body:
         <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slider-item="next"></a>
 
       </div>
-      <p class="justified-text" style="line-height: 1.8;">
-        We construct Phys-AD dataset with 22 classes of objects, 6,359 videos and 796,320 frames in total. Compared with other video datasets, this is a large-scale industry-related real-world video dataset. <br>
-        Our dataset keeps the video resolution as high as 1920*1080 to meet the demand of detailed appearance. We also adopt an FPS of 60 to better catch the fast motion of the object. <br>
-        We design the videos to be short, ranging from 1s to 4s, depending on the class. On the one hand most interactions can be accomplished in such time. On the other hand we expect the detection process to be quick under the scene of industry.
-      </p>
+      <ul class="uk-list uk-list-disc">
+          <li>Phys-AD dataset has <b>22 classes</b> of objects, <b>6,359 videos</b> and <b>796,320 frames</b> in total.</li>
+          <li>Videos have a resolution as high as <b>1920*1080</b> to meet the demand of detailed appearance. </li>
+          <li>An <b>FPS of 60</b> is adopted to better catch the fast motion of the object.</li>
+          <li>A single video is designed to be from <b>1s to 4s</b>, depending on the class.</li>
+      </ul>
       <div></div>
       <img src="statistic.png" alt="Description" uk-img>
       <div></div>
       <p class="justified-text" style="line-height: 1.8;">
-        We apply multiple interactions according to the functions of the objects with UR5 robot and motor/servo, such as slide, move, squeeze, stretch, rotate, etc.
+        We apply multiple interactions according to the functions of the objects with <b>UR5 robot</b> and <b>motor/servo</b>, such as slide, move, squeeze, stretch, rotate, etc.
       </p>
       <img src="data collection.png" alt="Description" uk-img>
 
   - title: PAEval
     text: |
       <p class="justified-text" style="line-height: 1.8;">
-        To assess the ability of VLMs to understand videos, we propose a novel evaluation matrix: PAEval. By compare the outputs of a VLM with the standard descriptions of a video and the explanations of the abnomalities separately, we can get the PAEval scores of the video.<br>
+        To assess the ability of VLMs to understand videos, we propose a novel evaluation matrix: <b>PAEval</b>. By compare the outputs of a VLM with the standard descriptions of a video and the explanations of the abnomalities separately, we can get the PAEval scores of the video.<br>
         A label is designed by human and enhanced by GPT-4o. All of the enhanced labels are checked by human to ensure to be accurate. With this evaluation we expect the VLMs to focus on the esstial part and understand the video like experienced human. 
       </p>
       <video
@@ -215,8 +217,7 @@ body:
   - title: Benchmark
     text: |
       <p class="justified-text" style="line-height: 1.8;">
-        We test our dataset on the state-of-art methods and classic methods according to AUROC and PAEval, which can be basically divided into 'Unsupervised methods', 'Weakly supervised methods' and 'VLM based methods'.<br>
-        From the AUROCs we find the existing methods cannot perform well on our dataset, proving that the Phys-AD raise a novel field of IAD. From the PAEval we find that as the most potential methods, VLMs need more knowledge from the industrial scene, otherwise they would struggle to understand the videos properly.
+        We test our dataset with the state-of-art methods and classic methods according to AUROC and PAEval, which can be basically divided into <b>'Unsupervised methods'</b>, <b>'Weakly supervised methods'</b> and <b>'Video-understanding methods'</b>.<br>
       </p>
 
       <style>

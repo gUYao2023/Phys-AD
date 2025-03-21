@@ -21,7 +21,7 @@ class ResourceBtn extends React.Component {
       isMobile: window.innerWidth < 600,
     };
     this.icons = {
-      paper: FaFilePdf,
+      // paper: FaFilePdf,
       paper: SiArxiv,
       code: FaGithub,
       video: FaYoutube,
